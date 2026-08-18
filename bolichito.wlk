@@ -13,7 +13,7 @@ object bolichito {
 
   method tieneAlgoExhibidoDe(unColor) = objetoEnVidriera.color() == unColor || objetoEnMostrador.color() == unColor
 
-  method puedeMejorar() = self.estaEquilibrado().negate() || self.esMonocromatico()
+  method puedeMejorar() = not (self.estaEquilibrado()) || self.esMonocromatico()
  
 
   method puedeOfrecerleAlgoA(unaPersona) = unaPersona.leGusta(objetoEnVidriera) || unaPersona.leGusta(objetoEnMostrador)
